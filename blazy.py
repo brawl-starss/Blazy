@@ -25,7 +25,7 @@ br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time = 1)
 br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.1) Gecko/2008071615 Fedora/3.0.1-1.fc9 Firefox/3.0.1'),
 ('Accept','text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'), ('Accept-Encoding','br')]
 # Banner
-print """\033[1;37m    ____   _                    
+print( """\033[1;37m    ____   _                    
    |  _ \ | |              
    | |_) || |  __ _  ____ _   _ 
    |  _ < | | / _` ||_  /| | | |
@@ -33,7 +33,7 @@ print """\033[1;37m    ____   _
    |____/ |_| \__,_|/___| \__, |
                            __/ |
     Made with \033[91m<3\033[37m By D3V\033[1;37m   |___/ 
-    \033[0m"""
+    \033[0m""")
 url = raw_input('\033[1;34m[?]\033[0m Enter target URL: ') #takes input from user
 if 'http://' in url:
     pass
@@ -108,7 +108,7 @@ def find(): #Function for finding forms
 
         if username: #if such field is found
             username = (username.group().split('<TextControl(')[1][:-3]) #Extractst the name of field
-            print '\033[1;33m[!]\033[0m Username field: ' + username #prints name of field
+            print( '\033[1;33m[!]\033[0m Username field: ' + username)#prints name of field
             passwd = search(r'<PasswordControl\([^<]*=\)>', data) #Searchs for fields that accept password like text
 
             if passwd: #if such field is found
